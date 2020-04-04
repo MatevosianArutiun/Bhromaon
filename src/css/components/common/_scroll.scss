@@ -1,0 +1,28 @@
+.scroll {
+    text-decoration: none;
+    text-align: center;
+    animation-duration: 1.5s;
+     animation-iteration-count: infinite;
+     animation-name: bounce-1;
+     animation-timing-function: linear;
+     @keyframes bounce-1 {
+         0%   { transform: translateY(0); }
+         50%  { transform: translateY(10px); }
+         100% { transform: translateY(0); }
+     }
+     &__text {
+        @include text ($H50 , 400 ,$white);
+        letter-spacing: 3px;
+        font-family: $secondary-font;
+        display: block;
+        margin-bottom: 15px;
+       }
+       &__arrow {
+        @include text ($H400 , 400 ,$white);
+        transform: rotate(-90deg);
+        display: block;
+        margin-bottom: 130px;
+        
+        
+       }
+}

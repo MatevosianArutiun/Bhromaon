@@ -1,0 +1,76 @@
+.section-about {
+    background-image: url(../images/bg-about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &__container {
+        
+        @include flex(center, stretch ,column);
+        @media screen and (min-width: $screen-desktop) {
+            @include flex(center, stretch ,row);
+            padding-top: 115px;
+            padding-bottom: 130px;
+        }
+    }
+    &__content {
+        text-align: center;
+        padding: 0 10px;
+        padding-top: 100px;
+        @media screen and (min-width: $screen-desktop) {
+            text-align: start;
+            padding: 0 10px;
+            width: 50%;
+            margin-right: 30px;
+            @include flex(center, flex-start,column);
+        }
+        
+    }
+    &__title {
+        @include text ($H600 , 400 ,$white);
+        font-family: $base-font;
+        margin-bottom: 60px;
+    }
+    &__text {
+        @include text ($H100 , 400 ,$grey);
+        font-family: $secondary-font;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+    &__button {
+        margin-bottom: 100px;
+        @media screen and (min-width: $screen-desktop) {
+            margin-bottom: 0;
+        }
+    }
+    
+    &__gallery {
+        @include flex(center, center,column);
+        @media screen and (min-width: $screen-desktop) {
+            width: 50%;
+            @include flex(flex-start, flex-start,column);
+        }
+        
+        &--first {
+            margin-bottom: 50px;
+            @media screen and (min-width: $screen-desktop) {
+                padding-left: 65px;
+                margin-bottom: 0;
+            }
+            
+
+        }
+        &--last {
+            @media screen and (min-width: $screen-desktop) {
+                padding-left: 190px;
+            }
+            
+        }
+    }
+    &__img {
+        width: 300px;
+    }
+   
+}
