@@ -4,7 +4,6 @@
     text-transform: uppercase;
     background-color: $blue;
     padding: 20px 45px;
-    display: block;
     transition: background-color 1s linear;
     &:hover {
         background-color: $button-hover;
