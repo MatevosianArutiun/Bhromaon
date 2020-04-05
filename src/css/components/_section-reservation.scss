@@ -1,0 +1,36 @@
+.section-reservation {
+    background-color: $dark;
+
+    &__container {
+        padding-top: 100px;
+        padding-bottom: 115px;
+    }
+    &__list {
+        @include flex(center, center ,column);
+        @media screen and (min-width: $screen-desktop) {
+            @include flex(space-around, center ,row);
+        }
+    }
+    &__item {
+        margin-bottom: 100px;
+        @include flex(center, center ,column);
+        @media screen and (min-width: $screen-desktop) {
+            margin-bottom: 0;
+
+        }
+    }
+    &__icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 30px;
+    }
+    &__text {
+        @include text ($H600 , 400 ,$white);
+        font-family: $base-font;
+    }
+}
+
+
+.svg {
+    display: none;
+}
