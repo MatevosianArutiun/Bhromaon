@@ -1,34 +1,32 @@
 .form {
     margin: 0 10px 0 10px;
     margin-bottom: 100px;
+    width: 80%;
     @media screen and (min-width: $screen-desktop) {
         margin: 0;
+        width: auto;
         margin-bottom: 118px;
     }
     &__search {
+        @include flex(flex-start, stretch ,row);
         width: 100%;
         height: 65px;
+        border: 1px solid $white;
         background-color: $white;
         @media screen and (min-width: $screen-desktop) {
             width: 650px;
+            
         }
     }
     &__input {
+        display: block;
         @include text ($H10 , 700 ,$dark);
         letter-spacing: 1px;
         border: none;
         outline: none;
         appearance: none;
-        vertical-align: middle;
-        height: 100%;
-        width: 180px;
-        // padding: 20px 130px;
+        width: 70%;
         text-align: center;
-        @media screen and (min-width: $screen-desktop) {
-            width: 500px;
-            @include text ($H50 , 700 ,$dark);
-            padding: 20px 130px;
-        }
         &::placeholder {
             color: transparent;
             @media screen and (min-width: $screen-desktop) {
@@ -44,18 +42,17 @@
         }
     }
     &__button {
+     display: block;
      @include text ($H50 , 400 ,$white);
      text-transform: uppercase;
      letter-spacing: 2px;
      border: none;
      outline: none;
      cursor: pointer;
-     padding: 20px 3px 24px 3px;
+     width: 30%;
+     
      background-color: $blue;
      transition: background-color 1s linear;
-     @media screen and (min-width: $screen-desktop) {
-        padding: 20px 26px 24px 26px;
-     }
      &:hover {
          background-color: $button-hover;
      }
