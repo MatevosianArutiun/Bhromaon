@@ -46,18 +46,18 @@
         
     }
     &__slogan {
-        @include text ($H300 , 400 ,$white);
+        @include text ($H300 , 400 ,$grey);
         font-family: $secondary-font;
         margin-bottom: 30px;
         display: block;
     }
     &__title {
-        @include text ($H300 , 400 ,$white);
+        @include text ($H300 , 400 ,$grey);
         margin-bottom: 30px;
         font-family: $secondary-font;
     }
     &__text {
-        @include text ($H100 , 400 ,$white);
+        @include text ($H100 , 400 ,$grey);
         margin-bottom: 50px;
         line-height: 1.6;
         letter-spacing: 1px;
