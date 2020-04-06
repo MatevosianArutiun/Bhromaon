@@ -7,8 +7,10 @@
    background-position: center center;
    background-attachment: fixed;
    @include flex(center, center ,column);
+   height: 100vh;
    @media screen and (min-width: $screen-desktop) {
     padding-top: 265px;
+    height: auto;
    }
    &__title {
     @include text ($H500 , 700 ,$white);
