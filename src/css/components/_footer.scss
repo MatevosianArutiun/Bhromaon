@@ -27,7 +27,7 @@
     }
     &__icon {
         fill: $white;
-        &--blue {
+        &:hover {
             fill: $blue;
         }
     }
