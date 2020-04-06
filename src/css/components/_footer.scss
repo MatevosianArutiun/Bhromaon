@@ -1,0 +1,39 @@
+.footer {
+    background-color: $darker;
+    @include flex(center, center, column);
+    padding-top: 50px;
+    @media screen and (min-width: $screen-desktop) {
+        padding-top: 120px;
+    }
+    &__logo {
+        @include text ($H500 , 400 ,$white);
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 15px;
+    }
+    &__text {
+        @include text ($H100 , 400 ,$grey);
+        font-family: $secondary-font;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+    &__list {
+        @include flex(center, baseline, row);
+        margin-bottom: 50px;
+    }
+    &__item:not(:last-child) {
+        margin-right: 20px;
+    }
+    &__icon {
+        fill: $white;
+        &--blue {
+            fill: $blue;
+        }
+    }
+}
+
+.svg {
+    display: none;
+    padding: 0;
+}
