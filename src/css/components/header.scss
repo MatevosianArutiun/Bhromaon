@@ -5,6 +5,7 @@
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center center;
+   background-attachment: fixed;
    @include flex(center, center ,column);
    @media screen and (min-width: $screen-desktop) {
     padding-top: 265px;
