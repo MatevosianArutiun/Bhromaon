@@ -1,19 +1,20 @@
 .header {
    font-family: $secondary-font;
-   padding-top: 50px;
+   padding-top: 150px;
    background-image: url(../images/header-bg.png);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center center;
-   background-attachment: fixed;
+   background-attachment: scroll;
    @include flex(center, center ,column);
    height: 100vh;
    @media screen and (min-width: $screen-desktop-large) {
     padding-top: 265px;
     height: auto;
+    background-attachment: fixed;
    }
    &__title {
-    @include text ($H500 , 700 ,$white);
+    @include text ($H600 , 700 ,$white);
     letter-spacing: 11px;
     text-transform: uppercase;
     text-align: center;
