@@ -14,10 +14,10 @@
     background-attachment: fixed;
    }
    &__title {
-    @include text ($H600 , 700 ,$white);
+    @include text ($H500 , 700 ,$white);
     letter-spacing: 11px;
     text-transform: uppercase;
-    text-align: center;
+    margin: 0 auto;
     margin-bottom: 100px;
     @media screen and (min-width: $screen-desktop) {
         @include text ($H700 , 700 ,$white);
