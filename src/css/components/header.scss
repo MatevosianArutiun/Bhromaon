@@ -18,7 +18,10 @@
     letter-spacing: 11px;
     text-transform: uppercase;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    @media screen and (min-width: $screen-iphone) {
+        margin-bottom: 100px;
+    }
     @media screen and (min-width: $screen-desktop) {
         @include text ($H700 , 700 ,$white);
         margin-bottom: 17px;
