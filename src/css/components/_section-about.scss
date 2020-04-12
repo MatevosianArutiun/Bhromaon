@@ -57,15 +57,30 @@
         @media screen and (min-width: $screen-desktop) {
             padding-left: 65px;
             margin-bottom: 0;
+            transition: all .3s linear;
         }
+        &:hover {
+            @media screen and (min-width: $screen-desktop) {
+              transform: scale(1.1,1.1);
+              cursor: pointer;
+            }
+            
+          }
         
 
     }
     &__image-wrapper--last {
         @media screen and (min-width: $screen-desktop) {
             padding-left: 190px;
+            transition: all .3s linear;
         }
-        
+        &:hover {
+            @media screen and (min-width: $screen-desktop) {
+              transform: scale(1.1,1.1);
+              cursor: pointer;
+            }
+            
+          }
     }
     &__img {
         width: 300px;
