@@ -51,22 +51,21 @@
             @include flex(flex-start, flex-start,column);
             margin-bottom: 0;
         }
+    }
+    &__image-wrapper--first {
+        margin-bottom: 50px;
+        @media screen and (min-width: $screen-desktop) {
+            padding-left: 65px;
+            margin-bottom: 0;
+        }
         
-        &--first {
-            margin-bottom: 50px;
-            @media screen and (min-width: $screen-desktop) {
-                padding-left: 65px;
-                margin-bottom: 0;
-            }
-            
 
+    }
+    &__image-wrapper--last {
+        @media screen and (min-width: $screen-desktop) {
+            padding-left: 190px;
         }
-        &--last {
-            @media screen and (min-width: $screen-desktop) {
-                padding-left: 190px;
-            }
-            
-        }
+        
     }
     &__img {
         width: 300px;

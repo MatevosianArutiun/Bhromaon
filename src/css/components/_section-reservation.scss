@@ -1,12 +1,22 @@
 .section-reservation {
     background-color: $dark;
-
     &__container {
         padding-top: 100px;
         padding-bottom: 100px;
+        position: relative;
+    }
+    &__image {
+        display: none;
+        @media screen and (min-width: $screen-desktop) {
+            transform: translate(-10px, 30px);
+            display: block;
+            max-width: 68%;
+            margin: 0 auto;
+        }
     }
     &__list {
         @include flex(center, center ,column);
+        
         @media screen and (min-width: $screen-desktop) {
             @include flex(space-around, center ,row);
         }
@@ -19,6 +29,10 @@
 
         }
     }
+    &__icon-wrapper {
+        background-color: $dark;
+        z-index: 1;
+    }
     &__icon {
         width: 70px;
         height: 70px;
@@ -28,6 +42,7 @@
         @include text ($H600 , 400 ,$white);
         font-family: $base-font;
     }
+    
 }
 
 
