@@ -1,38 +1,35 @@
 .navigation {
-    background-color: $blue;
-    width: 100%;
-    &__container {
-        @include flex(space-between, center ,row);
+  background-color: $blue;
+  width: 100%;
+  &__container {
+    @include flex(space-between, center, row);
+  }
+  &__logo {
+    @include text($H500, 400, $white);
+    padding: 30px 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    @media screen and (min-width: $screen-desktop) {
+      margin: 0;
     }
-    &__logo {
-        @include text ($H500 , 400 ,$white);
-        padding: 30px 0 30px 0;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin: 0 auto;
-        @media screen and (min-width: $screen-desktop) {
-            margin: 0;
-        }
-        
-        
-        
+  }
+  &__list {
+    display: none;
+    @media screen and (min-width: $screen-desktop) {
+      @include flex(space-between, center, row);
     }
-    &__list {
-        display: none;
-        @media screen and (min-width: $screen-desktop) {
-            @include flex(space-between, center ,row);
-        }
+  }
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  &__link {
+    @include text($H10, 400, $white);
+    text-transform: uppercase;
+    transition: all 0.1s linear;
+    &:hover {
+      color: $button-hover;
+      border-bottom: 1px solid $button-hover;
     }
-    &__item:not(:last-child) {
-        margin-right: 40px;
-    }
-    &__link {
-        @include text ($H10 , 400 ,$white);
-        text-transform: uppercase;
-        transition: all .1s linear;
-        &:hover {
-            color: $button-hover;
-            border-bottom: 1px solid $button-hover;
-        }
-    }
+  }
 }

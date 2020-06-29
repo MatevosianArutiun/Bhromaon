@@ -1,72 +1,72 @@
 .form {
-    margin: 0 10px 0 10px;
-    margin-bottom: 50px;
-    width: 80%;
+  margin: 0 10px 0 10px;
+  margin-bottom: 50px;
+  width: 80%;
+  @media screen and (min-width: $screen-desktop) {
+    margin: 0;
+    width: auto;
+    margin-bottom: 118px;
+  }
+  &__search {
+    @include flex(flex-start, stretch, row);
+    width: 100%;
+    height: 50px;
+    border: 1px solid $white;
+    background-color: $white;
     @media screen and (min-width: $screen-desktop) {
-        margin: 0;
-        width: auto;
-        margin-bottom: 118px;
+      width: 650px;
+      height: 65px;
     }
-    &__search {
-        @include flex(flex-start, stretch ,row);
-        width: 100%;
-        height: 50px;
-        border: 1px solid $white;
-        background-color: $white;
-        @media screen and (min-width: $screen-desktop) {
-            width: 650px;
-            height: 65px;
-        }
+  }
+  &__input {
+    display: block;
+    @include text($H10, 700, $dark);
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    appearance: none;
+    width: 57%;
+    text-align: center;
+    @media screen and (min-width: $screen-tablet-small) {
+      width: 70%;
     }
-    &__input {
-        display: block;
-        @include text ($H10 , 700 ,$dark);
-        letter-spacing: 1px;
-        border: none;
-        outline: none;
-        appearance: none;
-        width: 57%;
-        text-align: center;
-        @media screen and (min-width: $screen-tablet-small) {
-            width: 70%;
-        }
-        &:focus {
-            border: 2px solid $blue;
-            @include text ($H300 , 700 ,$dark);
-            font-family: $secondary-font;
-        }
-        &::placeholder {
-            color: transparent;
-            @media screen and (min-width: $screen-desktop) {
-            font-family: $secondary-font;
-            letter-spacing: 3px;
-            color: $grey;
-         }
-        }
-        &:focus::-webkit-input-placeholder {
-            color: transparent;
-        }
+    &:focus {
+      border: 2px solid $blue;
+      @include text($H300, 700, $dark);
+      font-family: $secondary-font;
     }
-    &__button {
-     @include flex(center, stretch ,row);
-     @include text ($H50 , 400 ,$white);
-     text-transform: uppercase;
-     letter-spacing: 2px;
-     border: none;
-     outline: none;
-     cursor: pointer;
-     width: 43%;
-     padding: 0 5px;
-     background-color: $blue;
-     transition: background-color 1s linear;
-     @media screen and (min-width: $screen-tablet-small) {
-        width: 30%;
+    &::placeholder {
+      color: transparent;
+      @media screen and (min-width: $screen-desktop) {
+        font-family: $secondary-font;
+        letter-spacing: 3px;
+        color: $grey;
+      }
     }
-     &:hover {
-         background-color: $button-hover;
-     }
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
     }
-    &__text {
-        margin-right: 5px;
+  }
+  &__button {
+    @include flex(center, center, row);
+    @include text($H50, 400, $white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 43%;
+    padding: 0 5px;
+    background-color: $blue;
+    transition: background-color 1s linear;
+    @media screen and (min-width: $screen-tablet-small) {
+      width: 30%;
     }
+    &:hover {
+      background-color: $button-hover;
+    }
+  }
+  &__text {
+    margin-right: 5px;
+  }
 }
